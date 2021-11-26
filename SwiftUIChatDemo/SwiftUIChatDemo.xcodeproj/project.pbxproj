@@ -15,6 +15,7 @@
 		4AC0168D27511265009D8E63 /* SwiftUIChatDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0168C27511265009D8E63 /* SwiftUIChatDemoUITests.swift */; };
 		4AC0168F27511265009D8E63 /* SwiftUIChatDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0168E27511265009D8E63 /* SwiftUIChatDemoUITestsLaunchTests.swift */; };
 		4AC0169D2751130A009D8E63 /* StreamChatSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4AC0169C2751130A009D8E63 /* StreamChatSwiftUI */; };
+		4AC0169F27511371009D8E63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0169E27511371009D8E63 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		4AC0168827511265009D8E63 /* SwiftUIChatDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIChatDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC0168C27511265009D8E63 /* SwiftUIChatDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIChatDemoUITests.swift; sourceTree = "<group>"; };
 		4AC0168E27511265009D8E63 /* SwiftUIChatDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIChatDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AC0169E27511371009D8E63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		4AC0166527511264009D8E63 = {
 			isa = PBXGroup;
 			children = (
+				4AC0169E27511371009D8E63 /* AppDelegate.swift */,
 				4AC0167027511264009D8E63 /* SwiftUIChatDemo */,
 				4AC0168127511265009D8E63 /* SwiftUIChatDemoTests */,
 				4AC0168B27511265009D8E63 /* SwiftUIChatDemoUITests */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC0169F27511371009D8E63 /* AppDelegate.swift in Sources */,
 				4AC0167427511264009D8E63 /* ContentView.swift in Sources */,
 				4AC0167227511264009D8E63 /* SwiftUIChatDemoApp.swift in Sources */,
 			);
