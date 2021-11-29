@@ -18,7 +18,25 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions:
                         [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        streamChat = StreamChat(chatClient: chatClient)
+        var colors = ColorPalette()
+        let streamBlue = UIColor(red: 0, green: 108.0 / 255.0, blue: 255.0 / 255.0, alpha: 1)
+        colors.tintColor = Color(streamBlue)
+
+        var fonts = Fonts()
+        fonts.footnoteBold = Font.footnote
+        fonts.body = Font.title
+
+        let images = Images()
+        images.reactionLoveBig = UIImage(systemName: "heart.fill")!
+
+        let appearance = Appearance(colors: colors, images: images, fonts: fonts)
+
+        let channelNamer: ChatChannelNamer = { channel, currentUserId in
+            "This is our custom name: \(channel.name ?? "no name")"
+        }
+        let utils = Utils(channelNamer: channelNamer)
+        
+        streamChat = StreamChat(chatClient: chatClient, appearance: appearance, utils: utils)
 
         connectUser()
         
