@@ -15,7 +15,7 @@ struct SwiftUIChatDemoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ChatChannelListView()
+            ChatChannelListView(viewFactory: CustomViewFactory())
         }
     }
 }
