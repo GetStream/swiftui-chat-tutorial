@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A9408AB2754F2F50026FAD4 /* CustomAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9408AA2754F2F50026FAD4 /* CustomAttachment.swift */; };
 		4AC0167227511264009D8E63 /* SwiftUIChatDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0167127511264009D8E63 /* SwiftUIChatDemoApp.swift */; };
 		4AC0167427511264009D8E63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0167327511264009D8E63 /* ContentView.swift */; };
 		4AC0167627511264009D8E63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC0167527511264009D8E63 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A9408AA2754F2F50026FAD4 /* CustomAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAttachment.swift; sourceTree = "<group>"; };
 		4AC0166E27511264009D8E63 /* SwiftUIChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIChatDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC0167127511264009D8E63 /* SwiftUIChatDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIChatDemoApp.swift; sourceTree = "<group>"; };
 		4AC0167327511264009D8E63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				4AC0167127511264009D8E63 /* SwiftUIChatDemoApp.swift */,
 				4AC0167327511264009D8E63 /* ContentView.swift */,
+				4A9408AA2754F2F50026FAD4 /* CustomAttachment.swift */,
 				4AC0167527511264009D8E63 /* Assets.xcassets */,
 				4AC0167727511264009D8E63 /* Preview Content */,
 			);
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC0169F27511371009D8E63 /* AppDelegate.swift in Sources */,
+				4A9408AB2754F2F50026FAD4 /* CustomAttachment.swift in Sources */,
 				4AC0167427511264009D8E63 /* ContentView.swift in Sources */,
 				4AC0167227511264009D8E63 /* SwiftUIChatDemoApp.swift in Sources */,
 			);

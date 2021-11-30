@@ -34,7 +34,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         let channelNamer: ChatChannelNamer = { channel, currentUserId in
             "This is our custom name: \(channel.name ?? "no name")"
         }
-        let utils = Utils(channelNamer: channelNamer)
+        
+        let customResolver = CustomMessageResolver()
+        let utils = Utils(messageTypeResolver: customResolver, channelNamer: channelNamer)
         
         streamChat = StreamChat(chatClient: chatClient, appearance: appearance, utils: utils)
 
@@ -67,6 +69,18 @@ class CustomViewFactory: ViewFactory {
                              isFirst: Bool,
                              availableWidth: CGFloat) -> some View {
         return CustomMessageTextView(message: message, isFirst: isFirst)
+    }
+    
+    func makeCustomAttachmentViewType(
+        for message: ChatMessage,
+        isFirst: Bool,
+        availableWidth: CGFloat
+    ) -> some View {
+        CustomAttachmentView(
+            message: message,
+            width: availableWidth,
+            isFirst: isFirst
+        )
     }
 }
 
