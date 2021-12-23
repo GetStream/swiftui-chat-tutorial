@@ -80,7 +80,6 @@
 		4AC0166527511264009D8E63 = {
 			isa = PBXGroup;
 			children = (
-				4AC0169E27511371009D8E63 /* AppDelegate.swift */,
 				4AC0167027511264009D8E63 /* SwiftUIChatDemo */,
 				4AC0168127511265009D8E63 /* SwiftUIChatDemoTests */,
 				4AC0168B27511265009D8E63 /* SwiftUIChatDemoUITests */,
@@ -101,6 +100,7 @@
 		4AC0167027511264009D8E63 /* SwiftUIChatDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4AC0169E27511371009D8E63 /* AppDelegate.swift */,
 				4AC0167127511264009D8E63 /* SwiftUIChatDemoApp.swift */,
 				4AC0167327511264009D8E63 /* ContentView.swift */,
 				4A9408AA2754F2F50026FAD4 /* CustomAttachment.swift */,
