@@ -4,7 +4,7 @@ import UIKit
 import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    
+
     var streamChat: StreamChat?
 
     var chatClient: ChatClient = {
@@ -14,10 +14,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         let client = ChatClient(config: config)
         return client
     }()
-    
+
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions:
-                        [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+                        [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         var colors = ColorPalette()
         let streamBlue = UIColor(red: 0, green: 108.0 / 255.0, blue: 255.0 / 255.0, alpha: 1)
         colors.tintColor = Color(streamBlue)
@@ -31,23 +31,23 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
         let appearance = Appearance(colors: colors, images: images, fonts: fonts)
 
-        let channelNamer: ChatChannelNamer = { channel, currentUserId in
+        let channelNamer: ChatChannelNamer = { channel, _ in
             "This is our custom name: \(channel.name ?? "no name")"
         }
-        
+
         let customResolver = CustomMessageResolver()
         let utils = Utils(messageTypeResolver: customResolver, channelNamer: channelNamer)
-        
+
         streamChat = StreamChat(chatClient: chatClient, appearance: appearance, utils: utils)
 
         connectUser()
-        
+
         return true
     }
-    
+
     private func connectUser() {
         let token = try! Token(rawValue: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoibHVrZV9za3l3YWxrZXIifQ.kFSLHRB5X62t0Zlc7nwczWUfsQMwfkpylC6jCUZ6Mc0")
-            
+
         chatClient.connectUser(
                 userInfo: .init(id: "luke_skywalker",
                                 name: "Luke Skywalker",
@@ -64,13 +64,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 class CustomViewFactory: ViewFactory {
     @Injected(\.chatClient) public var chatClient
-    
+
     func makeMessageTextView(for message: ChatMessage,
                              isFirst: Bool,
                              availableWidth: CGFloat) -> some View {
         return CustomMessageTextView(message: message, isFirst: isFirst)
     }
-    
+
     func makeCustomAttachmentViewType(
         for message: ChatMessage,
         isFirst: Bool,
@@ -88,10 +88,10 @@ class CustomViewFactory: ViewFactory {
 struct CustomMessageTextView: View {
     @Injected(\.colors) var colors
     @Injected(\.fonts) var fonts
-    
+
     var message: ChatMessage
     var isFirst: Bool
-    
+
     public var body: some View {
         Text(message.text)
             .padding()
